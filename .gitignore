@@ -1,0 +1,6 @@
+# VIM
+*.swp
+
+# gom
+_vendor
+gcore
