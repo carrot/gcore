@@ -1,6 +1,6 @@
-#gcore
+#g-core
 
-Gcore is a super minimalist scaffolding for writing a REST API in Go.
+g-core is a super minimalist scaffolding for writing a REST API in Go.
 
 ## Why should you care?
 
@@ -33,7 +33,7 @@ Now gcore should be ready to run, so just run:
 
 ```sh
 ./gcore
-``
+```
 
 Head over to `http://localhost:$PORT/users/1` in a browser.  If you get a 200 response, you're all set up.
 
