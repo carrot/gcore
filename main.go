@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/brandonromano/gcore/controllers"
+	"github.com/carrot/gcore/controllers"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
 	"os"

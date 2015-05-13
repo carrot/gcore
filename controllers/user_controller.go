@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/brandonromano/gcore/models"
+	"github.com/carrot/gcore/models"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
 	"strconv"
