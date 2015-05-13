@@ -55,4 +55,4 @@ You'll probably want to delete the README + git related files so you can start o
 
 ## License
 
-TODO
+[MIT](license.txt)
