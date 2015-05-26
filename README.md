@@ -32,7 +32,7 @@ gom build
 Now gcore should be ready to run, so just run:
 
 ```sh
-./gcore
+PORT=8001 ./gcore
 ```
 
 Head over to `http://localhost:$PORT/users/1` in a browser.  If you get a 200 response, you're all set up.
