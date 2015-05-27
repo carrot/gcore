@@ -32,6 +32,10 @@ gom build
 Now gcore should be ready to run, so just run:
 
 ```sh
+./gcore
+```
+or if you have not set the PORT environment variable yet:
+```sh
 PORT=8001 ./gcore
 ```
 
