@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/carrot/gcore/models"
+	"github.com/carrot/gcore/response"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
 	"strconv"
@@ -11,15 +12,14 @@ type UserController struct{}
 
 func (c *UserController) ReadSingle(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
 	// Prepping response
-	response := new(models.Response).Init()
-	defer response.Output(writer)
+	resp := response.New()
+	defer resp.Output(writer)
 
 	// Parsing out params
 	id, err := strconv.ParseUint(params.ByName("id"), 0, 64)
 	if err != nil {
-		response.Success = false
-		response.Message = "The id parameter must be a uint64"
-		response.StatusCode = 403
+		resp.StatusCode = http.StatusBadRequest
+		resp.ErrorCode = response.ErrorInvalidParameters
 		return
 	}
 
@@ -28,6 +28,5 @@ func (c *UserController) ReadSingle(writer http.ResponseWriter, request *http.Re
 	user.Load(id)
 
 	// Prepping success response
-	response.Content = user
-	response.Success = true
+	resp.Content = user
 }

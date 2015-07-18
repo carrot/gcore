@@ -8,6 +8,6 @@ type User struct {
 
 func (u *User) Load(id uint64) {
 	u.Id = id
-	u.Name = "TODO"
-	u.Email = "TODO"
+	u.Name = "Brandon Romano"
+	u.Email = "Brandon@gmail.com"
 }
